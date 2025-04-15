@@ -6,8 +6,8 @@
     <title>صفحة ويب متعددة اللغات</title>
     <script>
         function setLanguage() {
-            const userLang = navigator.language || navigator.userLanguage; // الحصول على لغة المتصفح
-            const lang = userLang.split('-')[0]; // أخذ الجزء الأول من اللغة (مثل "ar" من "ar-SA")
+            const userLang = navigator.language || navigator.userLanguage;
+            const lang = userLang.split('-')[0];
 
             const content = {
                 ar: {
@@ -24,7 +24,7 @@
                 }
             };
 
-            const selectedLang = content[lang] || content['en']; // إذا لم تكن اللغة موجودة، استخدم الإنجليزية
+            const selectedLang = content[lang] || content['en'];
 
             document.getElementById('page-title').innerText = selectedLang.title;
             document.getElementById('about').innerText = selectedLang.about;
@@ -41,6 +41,7 @@
                 <li><a href="#about">عن الموقع</a></li>
                 <li><a href="#services">الخدمات</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="products-offers.html">عروض المنتجات</a></li>
             </ul>
         </nav>
     </header>
