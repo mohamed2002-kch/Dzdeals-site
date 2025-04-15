@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة ويب متعددة اللغات</title>
+    <script>
+        function setLanguage() {
+            const userLang = navigator.language || navigator.userLanguage; // الحصول على لغة المتصفح
+            const lang = userLang.split('-')[0]; // أخذ الجزء الأول من اللغة (مثل "ar" من "ar-SA")
+
+            const content = {
+                ar: {
+                    title: "مرحبًا بكم في صفحتي",
+                    about: "هذه صفحة ويب بسيطة تم إنشاؤها باستخدام HTML.",
+                    services: "نقدم مجموعة متنوعة من الخدمات.",
+                    contact: "إذا كان لديك أي استفسارات، يمكنك الاتصال بنا عبر البريد الإلكتروني: example@example.com"
+                },
+                en: {
+                    title: "Welcome to My Page",
+                    about: "This is a simple web page created using HTML.",
+                    services: "We offer a variety of services.",
+                    contact: "If you have any inquiries, you can contact us at: example@example.com"
+                }
+            };
+
+            const selectedLang = content[lang] || content['en']; // إذا لم تكن اللغة موجودة، استخدم الإنجليزية
+
+            document.getElementById('page-title').innerText = selectedLang.title;
+            document.getElementById('about').innerText = selectedLang.about;
+            document.getElementById('services').innerText = selectedLang.services;
+            document.getElementById('contact').innerText = selectedLang.contact;
+        }
+    </script>
+</head>
+<body onload="setLanguage()">
+    <header>
+        <h1 id="page-title">مرحبًا بكم في صفحتي</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">عن الموقع</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>عن الموقع</h2>
+        <p id="about">هذه صفحة ويب بسيطة تم إنشاؤها باستخدام HTML.</p>
+    </section>
+
+    <section id="services">
+        <h2>الخدمات</h2>
+        <p id="services">نقدم مجموعة متنوعة من الخدمات.</p>
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p id="contact">إذا كان لديك أي استفسارات، يمكنك الاتصال بنا عبر البريد الإلكتروني: example@example.com</p>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2023</p>
+    </footer>
+</body>
+</html>
