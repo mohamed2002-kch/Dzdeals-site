@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: #f4f4f4;
+      background: #f9f9f9;
       direction: rtl;
     }
     header {
@@ -18,9 +18,27 @@
       padding: 20px;
       text-align: center;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.2em;
+    nav {
+      background: #006233;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search-container {
+      text-align: center;
+      margin: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
     }
     .offers {
       display: grid;
@@ -34,10 +52,11 @@
       border-radius: 12px;
       padding: 15px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: relative;
     }
     .offer h2 {
       color: #006233;
-      font-size: 1.2em;
+      font-size: 1.1em;
     }
     .offer p {
       font-size: 0.95em;
@@ -51,6 +70,24 @@
       text-decoration: none;
       margin-top: 10px;
     }
+    .favorite {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #ccc;
+    }
+    .favorite.active {
+      color: gold;
+    }
+    .ads {
+      background: #fff;
+      margin: 20px;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      text-align: center;
+    }
     footer {
       text-align: center;
       padding: 12px;
@@ -62,49 +99,68 @@
 <body>
   <header>
     <h1>عروضي الجزائرية</h1>
-    <p>أحدث التخفيضات من المتاجر المحلية في الجزائر</p>
+    <p>أحدث العروض من المتاجر المحلية الجزائرية</p>
   </header>
 
-  <div class="offers">
-    <div class="offer">
-      <h2>Batolis - تخفيض %30 على الأجهزة المنزلية</h2>
-      <p>العرض ساري حتى 25 أفريل 2025</p>
-      <a href="https://www.batolis.com" class="btn" target="_blank">توجه للعرض</a>
+  <nav>
+    <a href="#">الكل</a>
+    <a href="#">إلكترونيات</a>
+    <a href="#">أزياء</a>
+    <a href="#">منزلية</a>
+    <a href="#">رياضة</a>
+  </nav>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="ابحث عن عرض أو متجر...">
+  </div>
+
+  <div class="ads">
+    <p>مساحة للإعلان: هل لديك منتج أو متجر؟ تواصل معنا للإعلان هنا!</p>
+  </div>
+
+  <div class="offers" id="offersContainer">
+    <div class="offer" data-title="Hanouty - تخفيض على الإلكترونيات">
+      <span class="favorite" onclick="toggleFavorite(this)">★</span>
+      <h2>Hanouty - خصم حتى 40%</h2>
+      <p>على الإلكترونيات والتجهيزات المنزلية</p>
+      <a href="https://hanouty.dz" target="_blank" class="btn">توجه للعرض</a>
     </div>
-    <div class="offer">
-      <h2>Foorshop - عرض 2+1 مجانا على الموضة</h2>
-      <p>العرض ساري حتى نهاية الشهر</p>
-      <a href="https://foorshop.com" class="btn" target="_blank">توجه للعرض</a>
+    <div class="offer" data-title="Foorshop - موضة 2+1 مجانا">
+      <span class="favorite" onclick="toggleFavorite(this)">★</span>
+      <h2>Foorshop - عرض 2+1 مجانا</h2>
+      <p>اشتر قطعتين واحصل على الثالثة مجانًا</p>
+      <a href="https://foorshop.com" target="_blank" class="btn">توجه للعرض</a>
     </div>
-    <div class="offer">
-      <h2>IdealForme - تخفيض 20% على المكملات</h2>
-      <p>كود: IDEAL20 | صالح حتى 30 أفريل</p>
-      <a href="https://idealforme.com" class="btn" target="_blank">توجه للعرض</a>
+    <div class="offer" data-title="Batolis - أجهزة منزلية">
+      <span class="favorite" onclick="toggleFavorite(this)">★</span>
+      <h2>Batolis - خصم 30% على الأجهزة</h2>
+      <p>تخفيضات على أجهزة الطبخ والتبريد</p>
+      <a href="https://batolis.com" target="_blank" class="btn">توجه للعرض</a>
     </div>
-    <div class="offer">
-      <h2>Zawwali - عروض خاصة للطلبة</h2>
-      <p>أسعار مناسبة ومنتجات مختارة</p>
-      <a href="https://zawwali.com" class="btn" target="_blank">توجه للعرض</a>
-    </div>
-    <div class="offer">
-      <h2>Hanouty - خصومات على الإلكترونيات</h2>
-      <p>حتى 40% على بعض المنتجات</p>
-      <a href="https://hanouty.dz" class="btn" target="_blank">توجه للعرض</a>
-    </div>
-    <div class="offer">
-      <h2>Guiddini - خصم 10% على الطلب الأول</h2>
-      <p>استخدم الكود: GUIDDZ10</p>
-      <a href="https://guiddini.com" class="btn" target="_blank">توجه للعرض</a>
-    </div>
-    <div class="offer">
-      <h2>Ouedkniss - تخفيضات موسمية على مختلف الأقسام</h2>
-      <p>منتجات متنوعة بأسعار مخفضة</p>
-      <a href="https://www.ouedkniss.com" class="btn" target="_blank">توجه للعرض</a>
+    <div class="offer" data-title="Guiddini - خصم أول طلب">
+      <span class="favorite" onclick="toggleFavorite(this)">★</span>
+      <h2>Guiddini - خصم 10%</h2>
+      <p>على أول طلب باستخدام الكود: GUIDDZ</p>
+      <a href="https://guiddini.com" target="_blank" class="btn">توجه للعرض</a>
     </div>
   </div>
 
   <footer>
     &copy; 2025 عروضي الجزائرية | جميع الحقوق محفوظة
   </footer>
+
+  <script>
+    function toggleFavorite(el) {
+      el.classList.toggle('active');
+    }
+
+    document.getElementById("searchInput").addEventListener("input", function() {
+      const value = this.value.toLowerCase();
+      document.querySelectorAll(".offer").forEach(offer => {
+        const title = offer.getAttribute("data-title").toLowerCase();
+        offer.style.display = title.includes(value) ? "block" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
