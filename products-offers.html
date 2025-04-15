@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>عروض المنتجات</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .title {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .discount {
+      color: green;
+      font-weight: bold;
+    }
+    .code {
+      background: #f0f0f0;
+      padding: 5px 10px;
+      margin: 10px 0;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .valid {
+      color: #666;
+      font-size: 14px;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background: #007bff;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>عروض المنتجات</h1>
+  <div class="container">
+    
+    <div class="card">
+      <img src="https://example.com/images/headphones.jpg" alt="سماعات">
+      <div class="title">سماعات بلوتوث من AliExpress</div>
+      <div class="discount">خصم 30%</div>
+      <div class="code">ALEX30</div>
+      <div class="valid">صالح حتى: 30 أفريل 2025</div>
+      <a class="link" href="https://www.aliexpress.com/item/1005005123456789.html" target="_blank">تسوق الآن</a>
+    </div>
+
+    <div class="card">
+      <img src="https://example.com/images/smartwatch.jpg" alt="ساعة ذكية">
+      <div class="title">ساعة ذكية من Batolis</div>
+      <div class="discount">خصم 15%</div>
+      <div class="code">BATOLIS15</div>
+      <div class="valid">صالح حتى: 25 أفريل 2025</div>
+      <a class="link" href="https://www.batolis.com/item/smartwatch-dz" target="_blank">تسوق الآن</a>
+    </div>
+
+    <div class="card">
+      <img src="https://example.com/images/phone.jpg" alt="هاتف ذكي">
+      <div class="title">هاتف ذكي من OrdiDz</div>
+      <div class="discount">خصم 10%</div>
+      <div class="code">ORDIDZ10</div>
+      <div class="valid">صالح حتى: 28 أفريل 2025</div>
+      <a class="link" href="https://www.ordidz.com/item/phone123" target="_blank">تسوق الآن</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
