@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": 1,
+    "title": "سماعات بلوتوث من AliExpress",
+    "discount": "خصم 30%",
+    "code": "ALEX30",
+    "valid_until": "30 أفريل 2025",
+    "link": "https://www.aliexpress.com/item/1005005123456789.html",
+    "image": "https://example.com/images/headphones.jpg",
+    "category": "electronics"
+  },
+  {
+    "id": 2,
+    "title": "ساعة ذكية من Batolis",
+    "discount": "خصم 15%",
+    "code": "BATOLIS15",
+    "valid_until": "25 أفريل 2025",
+    "link": "https://www.batolis.com/item/smartwatch-dz",
+    "image": "https://example.com/images/smartwatch.jpg",
+    "category": "fashion"
+  },
+  {
+    "id": 3,
+    "title": "هاتف ذكي من OrdiDz",
+    "discount": "خصم 10%",
+    "code": "ORDIDZ10",
+    "valid_until": "28 أفريل 2025",
+    "link": "https://www.ordidz.com/item/phone123",
+    "image": "https://example.com/images/phone.jpg",
+    "category": "electronics"
+  }
+]
