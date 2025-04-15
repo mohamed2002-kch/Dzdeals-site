@@ -4,142 +4,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عروضي | BonsPlans DZ</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>عروضي الجزائرية</title>
   <style>
     body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #f4f4f4;
+      direction: rtl;
     }
-
     header {
-      background: linear-gradient(135deg, #0e4d92, #00a8cc);
+      background: linear-gradient(to right, #006233, #d21034);
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 2.5em;
     }
-
-    .filters {
-      text-align: center;
-      margin: 20px 0;
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
     }
-
-    .filters button {
-      padding: 10px 20px;
-      background-color: #00a8cc;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      margin: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s;
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
-
-    .filters button:hover {
-      background-color: #007b8b;
-    }
-
     .offer {
-      background-color: white;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      display: inline-block;
-      width: calc(33% - 40px);
-      box-sizing: border-box;
+      background: white;
+      border: 2px solid #006233;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .offer:hover {
-      transform: scale(1.05);
+    .offer h2 {
+      color: #006233;
+      font-size: 1.2em;
     }
-
-    .offer img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+    .offer p {
+      font-size: 0.95em;
     }
-
     .btn {
-      background-color: #00a8cc;
+      display: inline-block;
+      background-color: #d21034;
       color: white;
-      padding: 10px 20px;
+      padding: 8px 16px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+      margin-top: 10px;
     }
-
-    .btn:hover {
-      background-color: #007b8b;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        font-size: 1.8em;
-      }
-      .offer {
-        width: calc(50% - 40px);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .offer {
-        width: 100%;
-      }
+    footer {
+      text-align: center;
+      padding: 12px;
+      background: #eee;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    عروضي
-    <p>أفضل العروض والخصومات في الجزائر</p>
+    <h1>عروضي الجزائرية</h1>
+    <p>أحدث التخفيضات من المتاجر المحلية في الجزائر</p>
   </header>
 
-  <div class="filters">
-    <button onclick="filterCategory('electronics')">إلكترونيات</button>
-    <button onclick="filterCategory('fashion')">أزياء</button>
-    <button onclick="filterCategory('home')">منزل</button>
+  <div class="offers">
+    <div class="offer">
+      <h2>Batolis - تخفيض %30 على الأجهزة المنزلية</h2>
+      <p>العرض ساري حتى 25 أفريل 2025</p>
+      <a href="https://www.batolis.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>Foorshop - عرض 2+1 مجانا على الموضة</h2>
+      <p>العرض ساري حتى نهاية الشهر</p>
+      <a href="https://foorshop.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>IdealForme - تخفيض 20% على المكملات</h2>
+      <p>كود: IDEAL20 | صالح حتى 30 أفريل</p>
+      <a href="https://idealforme.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>Zawwali - عروض خاصة للطلبة</h2>
+      <p>أسعار مناسبة ومنتجات مختارة</p>
+      <a href="https://zawwali.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>Hanouty - خصومات على الإلكترونيات</h2>
+      <p>حتى 40% على بعض المنتجات</p>
+      <a href="https://hanouty.dz" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>Guiddini - خصم 10% على الطلب الأول</h2>
+      <p>استخدم الكود: GUIDDZ10</p>
+      <a href="https://guiddini.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
+    <div class="offer">
+      <h2>Ouedkniss - تخفيضات موسمية على مختلف الأقسام</h2>
+      <p>منتجات متنوعة بأسعار مخفضة</p>
+      <a href="https://www.ouedkniss.com" class="btn" target="_blank">توجه للعرض</a>
+    </div>
   </div>
 
-  <div id="offers-container"></div>
-
-  <script>
-    fetch("products.json")
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById("offers-container");
-        data.forEach(offer => {
-          const div = document.createElement("div");
-          div.className = `offer ${offer.category}`;
-          div.innerHTML = `
-            <img src="${offer.image}" alt="${offer.title}">
-            <h2>${offer.title}</h2>
-            <p>${offer.discount}</p>
-            <p>استعمل كود: <strong>${offer.code}</strong></p>
-            <p>صالح حتى: ${offer.valid_until}</p>
-            <a href="${offer.link}" class="btn" target="_blank"><i class="fas fa-arrow-right"></i> توجه للعرض</a>
-          `;
-          container.appendChild(div);
-        });
-      });
-
-    function filterCategory(category) {
-      const offers = document.querySelectorAll('.offer');
-      offers.forEach(offer => {
-        if (offer.classList.contains(category)) {
-          offer.style.display = 'block';
-        } else {
-          offer.style.display = 'none';
-        }
-      });
-    }
-  </script>
+  <footer>
+    &copy; 2025 عروضي الجزائرية | جميع الحقوق محفوظة
+  </footer>
 </body>
 </html>
